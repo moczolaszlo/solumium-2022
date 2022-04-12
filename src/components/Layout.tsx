@@ -1,0 +1,122 @@
+import React from 'react';
+
+import '../index.css';
+import solumiumLogo from '../images/solumium_logo.png';
+
+import badge7csillagos from '../images/badge_7csillagos.png';
+import badgeForbes from '../images/badge_forbes.png';
+import badgeGranprize from '../images/badge_granprize.png';
+
+const isNew = window.location.hostname.includes('solumium');
+
+type Language = 'hu' | 'en';
+
+type LayoutProps = {
+    activePage: 'index' | 'termekeink' | 'tudomanyos-hatter' | 'rolunk' | 'products' | 'about-us' | 'scientific-background';
+    children: React.ReactNode | string;
+    requestedLanguage: Language;
+    withBadges?: boolean;
+};
+
+type Pages = {
+    [language in Language]: {
+        id: string;
+        name: string;
+    }[]
+};
+
+const PAGES: Pages = {
+    hu: [
+        {
+            id: 'termekeink',
+            name: 'Termékeink',
+        },
+        {
+            id: 'tudomanyos-hatter',
+            name: 'Tudományos háttér'
+        },
+        {
+            id: 'rolunk',
+            name: 'Rólunk',
+        },
+    ],
+    en: [
+        {
+            id: 'products',
+            name: 'Products',
+        },
+        {
+            id: 'scientific-background',
+            name: 'Scientific background'
+        },
+        {
+            id: 'about-us',
+            name: 'About us',
+        },
+
+    ],
+}
+const onChangeLanguage = (language: Language) => {
+    localStorage.setItem('language', language);
+};
+
+const Layout = ({ activePage, children, requestedLanguage, withBadges }: LayoutProps) => {
+    const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
+
+    return (
+        <div id="wrapper">
+            <header>
+                <a href={isNew ? '/new/' : '/'} aria-current={activePage === 'index' ? 'page' : null}>
+                    <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
+                </a>
+                <nav>
+                    <ul>
+                        {PAGES[requestedLanguage].map(({id, name}) => (
+                            <li>
+                                <a href={`/${isNew ? 'new/' : ''}${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <nav>
+                    <ul>
+                        {Object.keys(PAGES).map((lang: Language) => {
+                            let href = `/${isNew ? 'new/' : ''}`;
+                            const index = PAGES[requestedLanguage].findIndex(({id}) => id === activePage);
+                            if (index > -1) {
+                                href = `/${isNew ? 'new/' : ''}${PAGES[lang][index].id}`
+                            }
+                            return (
+                                <li>
+                                    <a href={href} aria-current={requestedLanguage === lang} lang={lang} onClick={() => onChangeLanguage(lang)}>{lang}</a>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </nav>
+            </header>
+            <main className={mainClassName}>{children}</main>
+            <footer>
+                {withBadges && (
+                    <>
+                        <a href="#">
+                            <img src={badgeForbes} alt="Forbes interjú" width="90" height="90" />
+                        </a>
+                        <a href="#">
+                            <img src={badgeGranprize} alt="Gran Prize winner 2015" width="90" height="90" />
+                        </a>
+                        <a href="#">
+                            <img src={badge7csillagos} alt="7 csillagos" width="90" height="90" />
+                        </a>                    
+                    </>
+                )}
+                <div>
+                    <span>&copy; {new Date().getFullYear()} Solumium Kft</span>
+                    <span>www.solumium.hu</span>
+                </div>
+            </footer>
+        </div>
+    )
+};
+
+export default Layout;
