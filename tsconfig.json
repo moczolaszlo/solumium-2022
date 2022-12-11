@@ -9,5 +9,8 @@
       "allowSyntheticDefaultImports": true,
       "esModuleInterop": true,
       "moduleResolution": "node",
+      "lib": [
+        "dom"
+      ],
     }
   }

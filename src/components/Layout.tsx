@@ -11,8 +11,11 @@ const isNew = window.location.hostname.includes('solumium');
 
 type Language = 'hu' | 'en';
 
+type PageId = 'index' | 'termekeink' | 'tudomanyos-hatter' | 'rolunk' | 'products' | 'about-us' | 'scientific-background';
+
 type LayoutProps = {
-    activePage: 'index' | 'termekeink' | 'tudomanyos-hatter' | 'rolunk' | 'products' | 'about-us' | 'scientific-background';
+    activePage: PageId;
+    anotherLanguagePage: PageId;
     children: React.ReactNode | string;
     requestedLanguage: Language;
     withBadges?: boolean;
@@ -28,12 +31,12 @@ type Pages = {
 const PAGES: Pages = {
     hu: [
         {
-            id: 'termekeink',
-            name: 'Termékeink',
-        },
-        {
             id: 'tudomanyos-hatter',
             name: 'Tudományos háttér'
+        },
+        {
+            id: 'termekeink',
+            name: 'Termékeink',
         },
         {
             id: 'rolunk',
@@ -42,12 +45,12 @@ const PAGES: Pages = {
     ],
     en: [
         {
-            id: 'products',
-            name: 'Products',
-        },
-        {
             id: 'scientific-background',
             name: 'Scientific background'
+        },
+        {
+            id: 'products',
+            name: 'Products',
         },
         {
             id: 'about-us',
@@ -57,10 +60,10 @@ const PAGES: Pages = {
     ],
 }
 const onChangeLanguage = (language: Language) => {
-    localStorage.setItem('language', language);
+    window.localStorage.setItem('language', language);
 };
 
-const Layout = ({ activePage, children, requestedLanguage, withBadges }: LayoutProps) => {
+const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, withBadges }: LayoutProps) => {
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
 
     return (
@@ -84,7 +87,7 @@ const Layout = ({ activePage, children, requestedLanguage, withBadges }: LayoutP
                             let href = `/${isNew ? 'new/' : ''}`;
                             const index = PAGES[requestedLanguage].findIndex(({id}) => id === activePage);
                             if (index > -1) {
-                                href = `/${isNew ? 'new/' : ''}${PAGES[lang][index].id}`
+                                href = `/${isNew ? 'new/' : ''}${anotherLanguagePage}`
                             }
                             return (
                                 <li>
@@ -112,7 +115,9 @@ const Layout = ({ activePage, children, requestedLanguage, withBadges }: LayoutP
                 )}
                 <div>
                     <span>&copy; {new Date().getFullYear()} Solumium Kft</span>
-                    <span>www.solumium.hu</span>
+                    <span>email: info@solumium.com</span>
+                    <span>tel: +3620-4700597</span>
+                    <span>web: www.solumium.hu</span>
                 </div>
             </footer>
         </div>
