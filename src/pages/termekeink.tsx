@@ -5,6 +5,9 @@ import Layout from '../components/Layout';
 import productCoral from '../images/product_coral.jpg';
 import productPental from '../images/product_pental.jpg';
 
+import manualCoral from '../docs/SC-250_HasznUt_HU_20220813.pdf';
+import manualPental from '../docs/SP-30_HasznUt_HU_20220813.pdf';
+
 const Page = () => {
     return (
         <Layout activePage="termekeink" anotherLanguagePage="products" requestedLanguage="hu">
@@ -27,7 +30,7 @@ const Page = () => {
                         Hígítva alkalmazandó.
                     </p>
                     <p>
-                        <a href="#" target="_blank">Solumium Coral 250ml Használati utasítás</a>
+                        <a href={manualCoral} target="_blank">Solumium Coral 250ml Használati utasítás</a>
                     </p>
                     <p>
                         VÁSÁRLÁS:<br />
@@ -60,7 +63,7 @@ const Page = () => {
                         Hígítva alkalmazandó.
                     </p>
                     <p>
-                        <a href="#" target="_blank">Solumium Pental 30ml Használati utasítás</a><br />
+                        <a href={manualPental} target="_blank">Solumium Pental 30ml Használati utasítás</a><br />
                     </p>
                     <p>
                         VÁSÁRLÁS:<br />

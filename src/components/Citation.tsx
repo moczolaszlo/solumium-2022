@@ -1,5 +1,10 @@
 import React from 'react';
 
+import citation5en from '../docs/disinfectants-table_20221209_EN.pdf';
+import citation5hu from '../docs/disinfectants-table_20221209_HU.pdf';
+
+import citation18hu from '../docs/Koronavirus_es_ClO2_Physiol_Int_HU.pdf';
+
 type Language = 'hu' | 'en';
 
 type CitationProps = {
@@ -31,7 +36,7 @@ const Citation = ({ lang }: CitationProps) => {
                     </li>
                     <li>
                         [5] Wilson, C. L.; Droby, C. L. Microbal Food Contamination, CRC Press Boca Raton 2001, ISBN: 0849322294, p.12<br />
-                        For a table illustrating the effectiveness of chlorine dioxide click here.<br />
+                        <a href={citation5en} target="_blank">For a table illustrating the effectiveness of chlorine dioxide click here.</a>
                     </li>
                     <li>
                         [6] Tanner, R.: Comparative testing and evaluation of hard-surface disinfectants, J. Ind. Microbiol., 4, p. 145–154, 1989.<br />
@@ -169,7 +174,7 @@ const Citation = ({ lang }: CitationProps) => {
                 </li>
                 <li>
                     [5] Wilson, C. L.; Droby, C. L. Microbal Food Contamination, CRC Press Boca Raton 2001, ISBN: 0849322294, p.12<br />
-                    A klór-dioxid hatékonyságát illusztráló táblázat megnyitásához kattintson ide.
+                    <a href={citation5hu} target="_blank">A klór-dioxid hatékonyságát illusztráló táblázat megnyitásához kattintson ide.</a>
                 </li>
                 <li>
                     [6] Tanner, R.: Comparative testing and evaluation of hard-surface disinfectants, J. Ind. Microbiol., 4, p. 145–154, 1989.<br />
@@ -222,7 +227,7 @@ const Citation = ({ lang }: CitationProps) => {
                 <li>
                     [18] Kály-Kullai K., Wittmann M., Noszticzius Z., Rosivall L.: Can chlorine dioxide prevent the spreading of coronavirus or other viral infections? Medical hypotheses, Physiology International Vol. 107 Issue 1, 2020.<br />
                     <a href="https://dx.doi.org/10.1556/2060.2020.00015" target="_blank" rel="noopener noreferrer">https://dx.doi.org/10.1556/2060.2020.00015</a>< br />
-                    A cikk magyar fordításának megnyitásához katintson ide.
+                    <a href={citation18hu} target="_blank">A cikk magyar fordításának megnyitásához katintson ide.</a>
                 </li>
                 <li>
                     [19] AZ EURÓPAI PARLAMENT ÉS A TANÁCS 1272/2008/EK RENDELETE az anyagok és keverékek osztályozásáról, címkézéséről és csomagolásáról, a 67/548/EGK és az 1999/45/EK irányelv módosításáról és hatályon kívül helyezéséről, valamint az 1907/2006/EK rendelet módosításáról.<br />

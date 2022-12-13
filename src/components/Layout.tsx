@@ -7,6 +7,11 @@ import badge7csillagos from '../images/badge_7csillagos.png';
 import badgeForbes from '../images/badge_forbes.png';
 import badgeGranprize from '../images/badge_granprize.png';
 
+import badge7csillagosDoc from '../docs/solumium_7csillagos_20220315b_w1200.jpg';
+import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
+import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
+
+
 const isNew = window.location.hostname.includes('solumium');
 
 type Language = 'hu' | 'en';
@@ -67,21 +72,21 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
 
     return (
-        <div id="wrapper">
+        <div id="wrapper" className={requestedLanguage}>
             <header>
                 <a href={isNew ? '/new/' : '/'} aria-current={activePage === 'index' ? 'page' : null}>
                     <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
                 </a>
-                <nav>
+                <nav className="menu">
                     <ul>
-                        {PAGES[requestedLanguage].map(({id, name}) => (
-                            <li>
+                        {PAGES[requestedLanguage].map(({id, name}, index) => (
+                            <li className={`menu_${index}`} key={index}>
                                 <a href={`/${isNew ? 'new/' : ''}${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <nav>
+                <nav className="languageSelector">
                     <ul>
                         {Object.keys(PAGES).map((lang: Language) => {
                             let href = `/${isNew ? 'new/' : ''}`;
@@ -102,13 +107,13 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
             <footer>
                 {withBadges && (
                     <>
-                        <a href="#">
+                        <a href={badgeForbesDoc} target="_blank">
                             <img src={badgeForbes} alt="Forbes interjú" width="90" height="90" />
                         </a>
-                        <a href="#">
+                        <a href={badgeGranprizeDoc} target="_blank">
                             <img src={badgeGranprize} alt="Gran Prize winner 2015" width="90" height="90" />
                         </a>
-                        <a href="#">
+                        <a href={badge7csillagosDoc} target="_blank">
                             <img src={badge7csillagos} alt="7 csillagos" width="90" height="90" />
                         </a>                    
                     </>

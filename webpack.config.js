@@ -47,6 +47,13 @@ module.exports = {
           filename: 'static/images/[name].[contenthash][ext]',
         },
       },
+      {
+        test: /\.(pdf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/docs/[name].[contenthash][ext]',
+        },
+      },
     ],
   },
   resolve: {

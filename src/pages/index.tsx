@@ -62,8 +62,8 @@ const Content = () => {
         <section className="index__content">
             <h2>OUR NEW PRODUCTS: SOLUMIUM CORAL AND SOLUMIUM PENTAL</h2>
             <p>
-                Hyperpure chlorine dioxide is now available as a mouthwash concentrate.
-                (for more information, see: OUR PRODUCTS menu)
+                Hyperpure chlorine dioxide is now available as a mouthwash concentrate.<br />
+                (for more information, see: PRODUCTS menu)
             </p>
             <h2>FOR A HYPERPURE BREATH</h2>
             <p>

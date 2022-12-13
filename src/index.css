@@ -42,8 +42,11 @@ header img {
 }
 
 nav {
-    padding-left: 40px;
     padding-bottom: 8px;
+}
+
+.menu {
+    width: 470px;
 }
 
 nav ul {
@@ -55,7 +58,9 @@ nav ul {
 
 nav li {
     margin: 0;
+    white-space: nowrap;
 }
+
 
 nav li::after {
     content: '';
@@ -72,8 +77,8 @@ nav li:last-child::after {
 }
 
 nav a {
-    padding: 0 12px;
-    letter-spacing: 2px;
+    display: inline-block;
+    letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -84,6 +89,38 @@ nav a[aria-current="true"] {
     pointer-events: none;
 }
 
+.hu .menu_0 a {
+    width: 185px;
+    padding-right: 15px;
+    text-align: right;
+}
+
+.en .menu_0 a {
+    width: 185px;
+    text-align: left;
+}
+
+.menu_1 a {
+    width: 106px;
+    text-align: center;
+}
+
+.hu .menu_2 {
+    padding: 0 15px;
+}
+
+.en .menu_2 {
+    padding: 0 20px;
+}
+
+.languageSelector li:first-child a {
+    padding-right: 8px;
+}
+
+.languageSelector li:last-child a {
+    padding-left: 8px;
+}
+
 main {
     max-width: 600px;
     margin: 0 auto 70px;
@@ -91,6 +128,7 @@ main {
 
 main.products {
     max-width: 800px;
+    width: 800px;
 }
 
 h1 {
@@ -121,6 +159,7 @@ h1 span {
 
 .product {
     display: flex;
+    align-items: flex-start;
     position: relative;
     z-index: 1;
 }
@@ -135,11 +174,19 @@ h1 span {
     width: 100%;
     max-width: 425px;
     height: auto;
-    margin: -30px -80px 0 -35px;
+    margin: -40px -80px 0 -35px;
 }
 
 .product div {
-    padding-top: 40px;
+    padding-top: 10px;
+}
+
+.product:last-child img {
+    margin-top: 0;
+}
+
+.product:last-child div {
+    padding-top: 100px;
 }
 
 h2 {
@@ -174,7 +221,7 @@ ol li {
 
 footer {
     margin-top: auto;
-    padding-top: 16px;
+    padding-top: 20px;
     text-align: center;
     background: url('images/bg_footer.png') no-repeat center top;
 }
@@ -189,8 +236,11 @@ footer a img {
     border: 0;
 }
 
-footer div * {
-    padding: 0 8px;
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .team {
@@ -201,20 +251,16 @@ footer div * {
     margin: 30px 0 50px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 899px) {
     header {
-        align-items: flex-start;
         flex-direction: column;
-        padding: 0;
+        align-items: flex-start;
+        padding-left: 0;
+        background: none;
     }
 
     nav {
         padding-left: 0;
-    }
-
-    header,
-    footer {
-        background: none;
     }
 
     .index__content {
