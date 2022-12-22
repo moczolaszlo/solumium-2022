@@ -5,8 +5,8 @@ import Layout from '../components/Layout';
 import productCoral from '../images/product_coral.jpg';
 import productPental from '../images/product_pental.jpg';
 
-import manualCoral from '../docs/SC-250_HasznUt_HU_20220813.pdf';
-import manualPental from '../docs/SP-30_HasznUt_HU_20220813.pdf';
+import manualCoral from '../docs/Solumium_SC-250_HasznalatiUtasitas_20221217.pdf';
+import manualPental from '../docs/Solumium_SP-30_HasznalatiUtasitas_20221217.pdf';
 
 const Page = () => {
     return (

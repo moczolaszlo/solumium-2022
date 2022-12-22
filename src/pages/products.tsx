@@ -5,6 +5,9 @@ import Layout from '../components/Layout';
 import productCoral from '../images/product_coral.jpg';
 import productPental from '../images/product_pental.jpg';
 
+import manualCoral from '../docs/Solumium_SC-250_User-Instructions_20221217.pdf';
+import manualPental from '../docs/Solumium_SP-30_User-Instructions_20221217.pdf';
+
 const Page = () => {
     return (
         <Layout activePage="products" anotherLanguagePage="termekeink" requestedLanguage="en">
@@ -24,7 +27,7 @@ const Page = () => {
                         Dilute before use.
                     </p>
                     <p>
-                        <a href="#" target="_blank">Solumium Coral 250ml User Instructions</a>
+                        <a href={manualCoral} target="_blank">Solumium Coral 250ml User Instructions</a>
                     </p>
                     <p>
                         BUY:<br />
@@ -54,7 +57,7 @@ const Page = () => {
                         Dilute before use.
                     </p>
                     <p>
-                        <a href="#" target="_blank">Solumium Pental 30ml User Instructions</a><br />
+                        <a href={manualPental} target="_blank">Solumium Pental 30ml User Instructions</a><br />
                     </p>
                     <p>
                         BUY:<br />

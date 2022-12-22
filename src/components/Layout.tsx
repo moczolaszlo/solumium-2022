@@ -12,8 +12,6 @@ import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
 
 
-const isNew = window.location.hostname.includes('solumium');
-
 type Language = 'hu' | 'en';
 
 type PageId = 'index' | 'termekeink' | 'tudomanyos-hatter' | 'rolunk' | 'products' | 'about-us' | 'scientific-background';
@@ -74,14 +72,14 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
     return (
         <div id="wrapper" className={requestedLanguage}>
             <header>
-                <a href={isNew ? '/new/' : '/'} aria-current={activePage === 'index' ? 'page' : null}>
+                <a href="/" aria-current={activePage === 'index' ? 'page' : null}>
                     <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
                 </a>
                 <nav className="menu">
                     <ul>
                         {PAGES[requestedLanguage].map(({id, name}, index) => (
                             <li className={`menu_${index}`} key={index}>
-                                <a href={`/${isNew ? 'new/' : ''}${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
+                                <a href={`/${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
                             </li>
                         ))}
                     </ul>
@@ -89,10 +87,10 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                 <nav className="languageSelector">
                     <ul>
                         {Object.keys(PAGES).map((lang: Language) => {
-                            let href = `/${isNew ? 'new/' : ''}`;
+                            let href = '';
                             const index = PAGES[requestedLanguage].findIndex(({id}) => id === activePage);
                             if (index > -1) {
-                                href = `/${isNew ? 'new/' : ''}${anotherLanguagePage}`
+                                href = `/${anotherLanguagePage}`
                             }
                             return (
                                 <li>
@@ -122,7 +120,7 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                     <span>&copy; {new Date().getFullYear()} Solumium Kft</span>
                     <span>email: info@solumium.com</span>
                     <span>tel: +3620-4700597</span>
-                    <span>web: www.solumium.hu</span>
+                    <span>web: solumium.com</span>
                 </div>
             </footer>
         </div>

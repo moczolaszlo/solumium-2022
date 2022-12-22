@@ -42,16 +42,22 @@ module.exports = {
       },
       {
         test: /\.(png|jpg)$/i,
+        include: [
+          path.resolve(__dirname, "src/images")
+        ],
         type: 'asset/resource',
         generator: {
           filename: 'static/images/[name].[contenthash][ext]',
         },
       },
       {
-        test: /\.(pdf)$/i,
+        test: /\.(jpg|pdf)$/i,
+        include: [
+          path.resolve(__dirname, "src/docs")
+        ],
         type: 'asset/resource',
         generator: {
-          filename: 'static/docs/[name].[contenthash][ext]',
+          filename: 'static/docs/[name][ext]',
         },
       },
     ],
