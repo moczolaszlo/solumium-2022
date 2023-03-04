@@ -73,7 +73,7 @@ const Page = () => {
                 A találmányhoz kapcsolódó tudományos kutatást és kísérleteket dr. Noszticzius Zoltán professzor és munkatársai végezték, akiket alább mutatunk be:
             </p>
             <p>
-                Dr. Noszticzius Zoltán
+                <strong>Dr. Noszticzius Zoltán</strong><br />
                 A Solumium projekt vezetője. Vegyészmérnök, a kémiai tudomány doktora, Széchenyi-, Polányi- és Svéd Gran-Prize díjas egyetemi tanár. Szakterülete az oszcillációs reakciók témaköre. Jelenleg a BME Professor Emeritusa.
             </p>
             <p>
