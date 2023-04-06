@@ -32,7 +32,7 @@ const Content = () => {
                 </p>
                 <p>
                     Gátolja a plakk (bakteriális lepedék) képződését, és ezáltal segít megelőzni<br />
-                    a fogszúvasodást és az ínygyulladást.
+                    a fogszuvasodást és az ínygyulladást.
                 </p>
                 <p>
                     A Solumium hatékony: koncentrátumként sokkal több öblítést tesz lehetővé, mint a hagyományos szájvizek.
