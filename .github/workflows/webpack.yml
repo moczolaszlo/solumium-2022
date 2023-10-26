@@ -31,5 +31,6 @@ jobs:
           server: ftpx.forpsi.com
           username: www.solumium.com
           password: ${{ secrets.password }}
+          protocol: ftps
           local-dir: ./dist/
           server-dir: ./www/
