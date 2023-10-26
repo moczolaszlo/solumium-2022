@@ -24,3 +24,12 @@ jobs:
         run: |
           npm install
           npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftpx.forpsi.com
+          username: www.solumium.com
+          password: ${{ secrets.PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./www/
