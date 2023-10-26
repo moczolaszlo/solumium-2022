@@ -28,9 +28,9 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftpx.forpsi.com
+          server: macos-ftpx.forpsi.com
           username: www.solumium.com
-          password: gAxTc568F5
+          password: ${{ secrets.password }}
           protocol: ftps
           local-dir: ./dist/
           server-dir: ./www/
