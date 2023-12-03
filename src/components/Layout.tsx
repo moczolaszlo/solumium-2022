@@ -8,8 +8,8 @@ import badge7csillagosEn from '../images/badge_7csillagos_en.png';
 import badgeForbes from '../images/badge_forbes.png';
 import badgeGranprize from '../images/badge_granprize.png';
 
-import badge7csillagosDocHu from '../docs/solumium 7csillagos 20231119 w1200.jpg';
-import badge7csillagosDocEn from '../docs/solumium 7csillagos EN 20231129b w1200.jpg';
+import badge7csillagosDocHu from '../docs/solumium_7csillagos_20231119_w1200.jpg';
+import badge7csillagosDocEn from '../docs/solumium_7csillagos_EN_20231129b_w1200.jpg';
 import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
 
