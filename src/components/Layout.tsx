@@ -3,11 +3,13 @@ import React from 'react';
 import '../index.css';
 import solumiumLogo from '../images/solumium_logo.png';
 
-import badge7csillagos from '../images/badge_7csillagos.png';
+import badge7csillagosHu from '../images/badge_7csillagos_hu.png';
+import badge7csillagosEn from '../images/badge_7csillagos_en.png';
 import badgeForbes from '../images/badge_forbes.png';
 import badgeGranprize from '../images/badge_granprize.png';
 
-import badge7csillagosDoc from '../docs/solumium_7csillagos_20220315b_w1200.jpg';
+import badge7csillagosDocHu from '../docs/solumium 7csillagos 20231119 w1200.jpg';
+import badge7csillagosDocEn from '../docs/solumium 7csillagos EN 20231129b w1200.jpg';
 import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
 
@@ -111,8 +113,8 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                         <a href={badgeGranprizeDoc} target="_blank">
                             <img src={badgeGranprize} alt="Gran Prize winner 2015" width="90" height="90" />
                         </a>
-                        <a href={badge7csillagosDoc} target="_blank">
-                            <img src={badge7csillagos} alt="7 csillagos" width="90" height="90" />
+                        <a href={requestedLanguage === 'en' ? badge7csillagosDocEn : badge7csillagosDocHu} target="_blank">
+                            <img src={requestedLanguage === 'en' ? badge7csillagosEn : badge7csillagosHu} alt={requestedLanguage === 'en' ? "The 7-star mouthwash" : "A 7 csillagos szájvíz"} width="90" height="90" />
                         </a>                    
                     </>
                 )}
