@@ -7,12 +7,13 @@ import badge7csillagosHu from '../images/badge_7csillagos_hu.png';
 import badge7csillagosEn from '../images/badge_7csillagos_en.png';
 import badgeForbes from '../images/badge_forbes.png';
 import badgeGranprize from '../images/badge_granprize.png';
+import badgeDw2024 from '../images/badge_dw2024.png';
 
 import badge7csillagosDocHu from '../docs/solumium_7csillagos_20231119_w1200.jpg';
 import badge7csillagosDocEn from '../docs/solumium_7csillagos_EN_20231129b_w1200.jpg';
 import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
-
+import badgeDw2024Doc from '../docs/Dental_World_2024_cikk.pdf';
 
 type Language = 'hu' | 'en';
 
@@ -115,7 +116,12 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                         </a>
                         <a href={requestedLanguage === 'en' ? badge7csillagosDocEn : badge7csillagosDocHu} target="_blank">
                             <img src={requestedLanguage === 'en' ? badge7csillagosEn : badge7csillagosHu} alt={requestedLanguage === 'en' ? "The 7-star mouthwash" : "A 7 csillagos szájvíz"} width="90" height="90" />
-                        </a>                    
+                        </a>
+                        {requestedLanguage === 'hu' && (
+                            <a href={badgeDw2024Doc} target="_blank">
+                                <img src={badgeDw2024} alt="Dental World 2024" width="90" height="90" />
+                            </a>
+                        )}
                     </>
                 )}
                 <div>
