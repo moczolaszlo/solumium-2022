@@ -1,4 +1,4 @@
-import React from 'react';
+import Popup from './Popup';
 
 import '../index.css';
 import solumiumLogo from '../images/solumium_logo.png';
@@ -73,65 +73,68 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
 
     return (
-        <div id="wrapper" className={requestedLanguage}>
-            <header>
-                <a href="/" aria-current={activePage === 'index' ? 'page' : null}>
-                    <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
-                </a>
-                <nav className="menu">
-                    <ul>
-                        {PAGES[requestedLanguage].map(({id, name}, index) => (
-                            <li className={`menu_${index}`} key={index}>
-                                <a href={`/${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <nav className="languageSelector">
-                    <ul>
-                        {Object.keys(PAGES).map((lang: Language) => {
-                            let href = '';
-                            const index = PAGES[requestedLanguage].findIndex(({id}) => id === activePage);
-                            if (index > -1) {
-                                href = `/${anotherLanguagePage}`
-                            }
-                            return (
-                                <li>
-                                    <a href={href} aria-current={requestedLanguage === lang} lang={lang} onClick={() => onChangeLanguage(lang)}>{lang}</a>
+        <>
+            <div id="wrapper" className={requestedLanguage}>
+                <header>
+                    <a href="/" aria-current={activePage === 'index' ? 'page' : null}>
+                        <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
+                    </a>
+                    <nav className="menu">
+                        <ul>
+                            {PAGES[requestedLanguage].map(({ id, name }, index) => (
+                                <li className={`menu_${index}`} key={index}>
+                                    <a href={`/${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
                                 </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
-            </header>
-            <main className={mainClassName}>{children}</main>
-            <footer>
-                {withBadges && (
-                    <>
-                        <a href={badgeForbesDoc} target="_blank">
-                            <img src={badgeForbes} alt="Forbes interjú" width="90" height="90" />
-                        </a>
-                        <a href={badgeGranprizeDoc} target="_blank">
-                            <img src={badgeGranprize} alt="Gran Prize winner 2015" width="90" height="90" />
-                        </a>
-                        <a href={requestedLanguage === 'en' ? badge7csillagosDocEn : badge7csillagosDocHu} target="_blank">
-                            <img src={requestedLanguage === 'en' ? badge7csillagosEn : badge7csillagosHu} alt={requestedLanguage === 'en' ? "The 7-star mouthwash" : "A 7 csillagos szájvíz"} width="90" height="90" />
-                        </a>
-                        {requestedLanguage === 'hu' && (
-                            <a href={badgeDw2024Doc} target="_blank">
-                                <img src={badgeDw2024} alt="Dental World 2024" width="90" height="90" />
+                            ))}
+                        </ul>
+                    </nav>
+                    <nav className="languageSelector">
+                        <ul>
+                            {Object.keys(PAGES).map((lang: Language) => {
+                                let href = '';
+                                const index = PAGES[requestedLanguage].findIndex(({ id }) => id === activePage);
+                                if (index > -1) {
+                                    href = `/${anotherLanguagePage}`;
+                                }
+                                return (
+                                    <li>
+                                        <a href={href} aria-current={requestedLanguage === lang} lang={lang} onClick={() => onChangeLanguage(lang)}>{lang}</a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </nav>
+                </header>
+                <main className={mainClassName}>{children}</main>
+                <footer>
+                    {withBadges && (
+                        <>
+                            <a href={badgeForbesDoc} target="_blank">
+                                <img src={badgeForbes} alt="Forbes interjú" width="90" height="90" />
                             </a>
-                        )}
-                    </>
-                )}
-                <div>
-                    <span>&copy; {new Date().getFullYear()} Solumium Kft</span>
-                    <span>email: info@solumium.com</span>
-                    <span>tel: +3620-4700597</span>
-                    <span>web: solumium.com</span>
-                </div>
-            </footer>
-        </div>
+                            <a href={badgeGranprizeDoc} target="_blank">
+                                <img src={badgeGranprize} alt="Gran Prize winner 2015" width="90" height="90" />
+                            </a>
+                            <a href={requestedLanguage === 'en' ? badge7csillagosDocEn : badge7csillagosDocHu} target="_blank">
+                                <img src={requestedLanguage === 'en' ? badge7csillagosEn : badge7csillagosHu} alt={requestedLanguage === 'en' ? "The 7-star mouthwash" : "A 7 csillagos szájvíz"} width="90" height="90" />
+                            </a>
+                            {requestedLanguage === 'hu' && (
+                                <a href={badgeDw2024Doc} target="_blank">
+                                    <img src={badgeDw2024} alt="Dental World 2024" width="90" height="90" />
+                                </a>
+                            )}
+                        </>
+                    )}
+                    <div>
+                        <span>&copy; {new Date().getFullYear()} Solumium Kft</span>
+                        <span>email: info@solumium.com</span>
+                        <span>tel: +3620-4700597</span>
+                        <span>web: solumium.com</span>
+                    </div>
+                </footer>
+            </div>
+            <Popup />
+        </>
     )
 };
 

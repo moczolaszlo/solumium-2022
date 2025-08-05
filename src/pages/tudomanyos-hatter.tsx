@@ -1,4 +1,3 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Citation from '../components/Citation';
 import Layout from '../components/Layout';
@@ -124,6 +123,15 @@ const Page = () => {
             </p>
             <p>
                 Felhasználóink számára további nagy előny, hogy a Solumium hígítva alkalmazandó, ezért sokkal több öblítést tesz lehetővé, mint a hagyományos szájvizek.
+            </p>
+            <h2>Válogathat-e egy szájvíz a káros és a hasznos baktériumok között?</h2>
+            <p>
+                Mint kiderült, igen. Arról a különleges és előnyös jelenségről van szó, hogy a tisztán klór-dioxid alapú szájvíz<br />
+                használata elsősorban a káros baktériumokat irtja, a hasznos baktériumokat kevésbé.<br />
+                Ennek a szelektív hatásnak a tudományos hátterét mutatta be 2025-ben egy magyar fizikusokból,<br />
+                vegyészekből és orvosokból álló kutatócsoport.<br />
+                Az általuk publikált (angol nyelvű) digitális kézirat elérhető a ChemRxiv kémiai tudományos portálon. [34]<br />
+                A világpiacon jelenleg egyetlen ilyen, tisztán klór-dioxid alapú szájvíz kapható: a Solumium.
             </p>
             <Citation lang="hu" />
         </Layout>

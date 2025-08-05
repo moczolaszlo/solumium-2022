@@ -1,4 +1,3 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Citation from '../components/Citation';
 import Layout from '../components/Layout';
@@ -119,6 +118,16 @@ const Page = () => {
             </p>
             <p>
                 Another great benefit for our users is that Solumium can be applied diluted, so it allows much more rinsing than traditional mouthwashes.
+            </p>
+            <h2>Can a mouthwash select between harmful and useful bacteria?</h2>
+            <p>
+                As it turns out, yes. It is a special and beneficial phenomenon that the use of a mouthwash based on<br />
+                pure chlorine dioxide primarily kills harmful bacteria, and kills less of the beneficial bacteria.<br />
+                The scientific background of this selective effect was presented in 2025 by a Hungarian research group<br />
+                consisting of physicists, chemists and doctors. They published the digital manuscript on the chemical<br />
+                science portal ChemRxiv. [34]<br />
+                There is only one such mouthwash based on pure chlorine dioxide on the world market today,<br />
+                and that is Solumium.
             </p>
             <Citation lang="en" />
         </Layout>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import citation5en from '../docs/disinfectants-table_20221209_EN.pdf';
 import citation5hu from '../docs/disinfectants-table_20221209_HU.pdf';
 
@@ -146,7 +144,11 @@ const Citation = ({ lang }: CitationProps) => {
                         [33] Daniel, F. B., Condie, L. W., Robinson, M., Stober, J. A., York, R. G., et al.: Comparative 90-day subchronic toxicity studies on three drinking water disinfectants, chlorine, monochloramine and chlorine dioxide in the Sprague-Dawley rats, Journal of American Water Works Association,Volume 82, Issue 10, p. 61–69, 1990.<br />
                         <a href="https://doi.org/10.1002/j.1551-8833.1990.tb07038.x" target="_blank" rel="noopener noreferrer">https://doi.org/10.1002/j.1551-8833.1990.tb07038.x</a>
                     </li>
-    
+                    <li>
+                        [34] Kály-Kullai, K., Zsembery, Á., Shahbazi, A., Rosivall, L., Megyesi, M., Lawson, T. B., Wittmann, M., Noszticzius, Z.:<br />
+                        Selective Effects of a Mouthwash Based on Pure Chlorine Dioxide. I. Effect on the Oral Mucosa and the Plaque Bacteria. Focused Review and Model Calculations, ChemRxiv, 2025<br />
+                        <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6866954c3ba0887c337e1078" target="_blank" rel="noopener noreferrer">https://chemrxiv.org/engage/chemrxiv/article-details/6866954c3ba0887c337e1078</a>
+                    </li>
                 </ol>
             </>
         );
@@ -284,6 +286,11 @@ const Citation = ({ lang }: CitationProps) => {
                 <li>
                     [33] Daniel, F. B., Condie, L. W., Robinson, M., Stober, J. A., York, R. G., et al.: Comparative 90-day subchronic toxicity studies on three drinking water disinfectants, chlorine, monochloramine and chlorine dioxide in the Sprague-Dawley rats, Journal of American Water Works Association,Volume 82, Issue 10, p. 61-69, 1990.<br />
                     <a href="https://doi.org/10.1002/j.1551-8833.1990.tb07038.x" target="_blank" rel="noopener noreferrer">https://doi.org/10.1002/j.1551-8833.1990.tb07038.x</a>
+                </li>
+                <li>
+                    [34] Kály-Kullai, K., Zsembery, Á., Shahbazi, A., Rosivall, L., Megyesi, M., Lawson, T. B., Wittmann, M., Noszticzius, Z.:<br />
+                    Selective Effects of a Mouthwash Based on Pure Chlorine Dioxide. I. Effect on the Oral Mucosa and the Plaque Bacteria. Focused Review and Model Calculations, ChemRxiv, 2025<br />
+                    <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6866954c3ba0887c337e1078" target="_blank" rel="noopener noreferrer">https://chemrxiv.org/engage/chemrxiv/article-details/6866954c3ba0887c337e1078</a>
                 </li>
             </ol>
         </>
