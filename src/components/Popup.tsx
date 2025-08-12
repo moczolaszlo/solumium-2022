@@ -4,11 +4,11 @@ import bacik from '../images/rosszbaci-per-jobaci.png';
 import iksz from '../images/iksz.png';
 
 const Popup = ({ language }: { language: 'hu' | 'en' }) => {
-    const [visible, setVisible] = useState(window.sessionStorage.getItem('isPopupVisible') !== 'false');
+    const [visible, setVisible] = useState(window.sessionStorage.getItem('isPopupVisible-'+language) !== 'false');
 
     const onClose = () => {
         setVisible(false);
-        // window.sessionStorage.setItem('isPopupVisible', 'false');
+        window.sessionStorage.setItem('isPopupVisible-'+language, 'false');
     };
 
     // Close modal on Escape key press

@@ -266,7 +266,7 @@ footer div {
 .popup {
     position: absolute;
     top: 260px;
-    padding: 50px 0 50px 100px;
+    padding: 50px 0 80px 120px;
     background-color: #4f647f;
     border: 1px solid #b4ccd9;
     color: #fff;
@@ -285,39 +285,39 @@ footer div {
 
 .popup h2 {
     margin: 0;
-    font-size: 47px;
+    font-size: 46px;
     line-height: 1;
     transform: scale(0.8, 1);
     transform-origin: left;
 }
 
 [data-lang='en'] .popup h2 {
-    font-size: 39px;
+    font-size: 38px;
 }
 
 .popup h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 19px;
     transform: scale(0.8, 1);
     transform-origin: left;
 }
 
 [data-lang='en'] .popup h3 {
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .popup > img {
     display: block;
-    margin: 20px auto;
+    margin: 20px 0 20px 200px;
 }
 
 .popup p {
     font-size: 13px;
-    font-weight: bold;
 }
 
 .popup p::first-line {
     font-size: 18px;
+    font-weight: bold;
 }
 
 .popup a {

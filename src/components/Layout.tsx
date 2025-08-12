@@ -69,6 +69,8 @@ const onChangeLanguage = (language: Language) => {
     window.localStorage.setItem('language', language);
 };
 
+const pathRoot = window.location.host === 'moczolaszlo.github.io' ? '/solumium-2022/' : '/';
+
 const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, withBadges }: LayoutProps) => {
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
 
@@ -76,14 +78,14 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
         <>
             <div id="wrapper" className={requestedLanguage}>
                 <header>
-                    <a href="/" aria-current={activePage === 'index' ? 'page' : null}>
+                    <a href={pathRoot} aria-current={activePage === 'index' ? 'page' : null}>
                         <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
                     </a>
                     <nav className="menu">
                         <ul>
                             {PAGES[requestedLanguage].map(({ id, name }, index) => (
                                 <li className={`menu_${index}`} key={index}>
-                                    <a href={`/${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
+                                    <a href={`${pathRoot}${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
                                 </li>
                             ))}
                         </ul>
@@ -94,7 +96,7 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                                 let href = '';
                                 const index = PAGES[requestedLanguage].findIndex(({ id }) => id === activePage);
                                 if (index > -1) {
-                                    href = `/${anotherLanguagePage}`;
+                                    href = `${pathRoot}${anotherLanguagePage}`;
                                 }
                                 return (
                                     <li>
