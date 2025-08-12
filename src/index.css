@@ -267,11 +267,12 @@ footer div {
 .popup {
     position: absolute;
     top: 260px;
-    padding: 50px 0 80px 120px;
+    padding: 50px 0 50px 110px;
     background-color: #4f647f;
     border: 1px solid #b4ccd9;
     color: #fff;
     max-width: 824px;
+    min-height: 485px;
 }
 
 .popup button {
@@ -293,7 +294,8 @@ footer div {
 }
 
 [data-lang='en'] .popup h2 {
-    font-size: 38px;
+    font-size: 39px;
+    transform: scale(0.85, 1);
 }
 
 .popup h3 {
@@ -305,6 +307,7 @@ footer div {
 
 [data-lang='en'] .popup h3 {
     font-size: 18px;
+    transform: scale(0.89, 1);
 }
 
 .popup > img {

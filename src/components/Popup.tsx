@@ -4,7 +4,7 @@ import bacik from '../images/rosszbaci-per-jobaci.png';
 import iksz from '../images/iksz.png';
 
 const Popup = ({ language }: { language: 'hu' | 'en' }) => {
-    const [visible, setVisible] = useState(window.sessionStorage.getItem('isPopupVisible-'+language) !== 'false');
+    const [visible, setVisible] = useState(window.sessionStorage.getItem('isPopupVisible-'+language) !== 'e');
 
     const onClose = () => {
         setVisible(false);
