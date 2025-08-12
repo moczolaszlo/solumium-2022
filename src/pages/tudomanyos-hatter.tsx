@@ -124,7 +124,7 @@ const Page = () => {
             <p>
                 Felhasználóink számára további nagy előny, hogy a Solumium hígítva alkalmazandó, ezért sokkal több öblítést tesz lehetővé, mint a hagyományos szájvizek.
             </p>
-            <h2>Válogathat-e egy szájvíz a káros és a hasznos baktériumok között?</h2>
+            <h2>VÁLOGATHAT-E EGY SZÁJVÍZ A KÁROS ÉS A HASZNOS BAKTÉRIUMOK KÖZÖTT?</h2>
             <p>
                 Mint kiderült, igen. Arról a különleges és előnyös jelenségről van szó, hogy a tisztán klór-dioxid alapú szájvíz<br />
                 használata elsősorban a káros baktériumokat irtja, a hasznos baktériumokat kevésbé.<br />

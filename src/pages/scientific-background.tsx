@@ -119,7 +119,7 @@ const Page = () => {
             <p>
                 Another great benefit for our users is that Solumium can be applied diluted, so it allows much more rinsing than traditional mouthwashes.
             </p>
-            <h2>Can a mouthwash select between harmful and useful bacteria?</h2>
+            <h2>CAN A MOUTHWASH SELECT BETWEEN HARMFUL AND USEFUL BACTERIA?</h2>
             <p>
                 As it turns out, yes. It is a special and beneficial phenomenon that the use of a mouthwash based on<br />
                 pure chlorine dioxide primarily kills harmful bacteria, and kills less of the beneficial bacteria.<br />
