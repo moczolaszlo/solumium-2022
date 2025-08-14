@@ -123,9 +123,11 @@ const Page = () => {
             <p>
                 As it turns out, yes. It is a special and beneficial phenomenon that the use of a mouthwash based on<br />
                 pure chlorine dioxide primarily kills harmful bacteria, and kills less of the beneficial bacteria.<br />
+                <br />
                 The scientific background of this selective effect was presented in 2025 by a Hungarian research group<br />
                 consisting of physicists, chemists and doctors. They published the digital manuscript on the chemical<br />
                 science portal ChemRxiv. [34]<br />
+                <br />
                 There is only one such mouthwash based on pure chlorine dioxide on the world market today,<br />
                 and that is Solumium.
             </p>

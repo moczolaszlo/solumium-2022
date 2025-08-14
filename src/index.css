@@ -262,6 +262,7 @@ footer div {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .popup {
@@ -369,5 +370,19 @@ footer div {
         left: 5%;
         right: 5%;
         padding: 30px;
+    }
+}
+
+@media (max-height: 750px) {
+    .popup {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-height: 500px) {
+    .popup {
+        top: 10px;
+        transform: translateY(0);
     }
 }
