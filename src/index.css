@@ -45,12 +45,9 @@ nav {
     padding-bottom: 8px;
 }
 
-.menu {
-    width: 470px;
-}
-
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -111,6 +108,10 @@ nav a[aria-current="true"] {
 
 .en .menu_2 {
     padding: 0 20px;
+}
+
+.languageSelector {
+    margin-left: 95px;
 }
 
 .languageSelector li:first-child a {
@@ -259,15 +260,13 @@ footer div {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: auto;
+    padding-top: 260px
 }
 
 .popup {
-    position: absolute;
-    top: 260px;
+    position: relative;
+    margin: 0 auto;
     padding: 50px 0 50px 110px;
     background-color: #4f647f;
     border: 1px solid #b4ccd9;
@@ -331,6 +330,10 @@ footer div {
     color: #5da0ee;
 }
 
+.citation a {
+    word-break: break-all;
+}
+
 @media (max-width: 899px) {
     header {
         flex-direction: column;
@@ -341,6 +344,11 @@ footer div {
 
     nav {
         padding-left: 0;
+    }
+
+    .languageSelector {
+        margin-left: 0;
+        align-self: flex-end;
     }
 
     h1 {
@@ -354,6 +362,10 @@ footer div {
 
     .index__content {
         margin: 0;
+    }
+
+    main.products {
+        width: auto;
     }
 
     .product {
@@ -374,13 +386,12 @@ footer div {
         padding: 0;
     }
 
+    .overlay {
+        padding: 2vh;
+    }
+
     .popup {
-        top: 5vh;
-        transform: none;
-        left: 5vw;
-        right: 5vw;
         padding: 30px;
-        max-width: 100vw;
     }
 
     .popup h2 {
@@ -393,12 +404,5 @@ footer div {
 
     .popup a {
         word-break: break-all;
-    }
-}
-
-@media (max-height: 500px) {
-    .popup {
-        top: 10px;
-        transform: translateY(0);
     }
 }

@@ -14,7 +14,7 @@ const Citation = ({ lang }: CitationProps) => {
         return (
             <>
                 <h2>REFERENCES:</h2>
-                <ol>
+                <ol className="citation">
                     <li>
                         [1] WO/2008/035130 Patent Cooperation Treaty (PCT ): Permeation method and apparatus for preparing fluids containing high purity chlorine dioxide, International Preliminary Report on Patentability: 12. 02. 2009.<br />
                         <a href="https://patentscope.wipo.int/search/en/WO2008035130" target="_blank" rel="noopener noreferrer">https://patentscope.wipo.int/search/en/WO2008035130</a><br />
@@ -157,7 +157,7 @@ const Citation = ({ lang }: CitationProps) => {
     return (
         <>
             <h2>IRODALOM:</h2>
-            <ol>
+            <ol className="citation">
                 <li>
                     [1] P 06 00735 lajstromszámú magyar találmányi bejelentés: Permeációs eljárás és berendezés nagytisztaságú klór-dioxidot tartalmazó fluidumok előállításához, Közzétéve: 2009. 04. 28. Szabadalmi Közlöny 114, 4/II P122., továbbá WO/2008/035130 lajstromszámú Patent Cooperation Treaty (PCT ) bejelentés: Permeation method and apparatus for preparing fluids containing high purity chlorine dioxide, International Preliminary Report on Patentability: 12. 02. 2009.<br />
                     <a href="https://patentscope.wipo.int/search/en/WO2008035130" target="_blank" rel="noopener noreferrer">https://patentscope.wipo.int/search/en/WO2008035130</a>

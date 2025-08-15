@@ -35,10 +35,10 @@ const Page = () => {
                         VÁSÁRLÁS:<br />
                         A Solumium Coral kapható vagy megrendelhető az ország bármely gyógyszertárában.<br />
                         Kiemelt partnereink:<br />
-                        <a href="https://sanitaria.hu/solumium_coral_250_ml" target="_blank" rel="noopener noreferrer">Sanitaria Kft</a>, 1024 Budapest, Rómer Flóris u. 34. &nbsp;tel: (+36-1) 3360884<br />
-                        <a href="https://www.lagymanyospatika.hu/termekeink/results,1-24?keyword=solumium" target="_blank" rel="noopener noreferrer">Lágymányos Patika</a>, 1111 Budapest, Budafoki út 47. &nbsp;tel: (+36-1) 4666246<br />
-                        <a href="http://www.medmarket.hu/szfgyt/" target="_blank" rel="noopener noreferrer">Szent Ferenc Gyógyszertár</a>, 1024 Budapest, Retek u. 3. &nbsp;tel: (+36-1) 2124196<br />
-                        <a href="http://www.medmarket.hu/szbgyt/" target="_blank" rel="noopener noreferrer">Szent Bernát Gyógyszertár</a>, 1126 Budapest, Böszörményi út 3a &nbsp;tel: (+36-1) 3555931
+                        <a href="https://sanitaria.hu/solumium_coral_250_ml" target="_blank" rel="noopener noreferrer">Sanitaria Kft</a>, 1024 Budapest, Rómer Flóris u. 34. tel: (+36-1) 3360884<br />
+                        <a href="https://www.lagymanyospatika.hu/termekeink/results,1-24?keyword=solumium" target="_blank" rel="noopener noreferrer">Lágymányos Patika</a>, 1111 Budapest, Budafoki út 47. tel: (+36-1) 4666246<br />
+                        <a href="http://www.medmarket.hu/szfgyt/" target="_blank" rel="noopener noreferrer">Szent Ferenc Gyógyszertár</a>, 1024 Budapest, Retek u. 3. tel: (+36-1) 2124196<br />
+                        <a href="http://www.medmarket.hu/szbgyt/" target="_blank" rel="noopener noreferrer">Szent Bernát Gyógyszertár</a>, 1126 Budapest, Böszörményi út 3a tel: (+36-1) 3555931
                     </p>
                 </div>
             </section>
@@ -68,10 +68,10 @@ const Page = () => {
                         VÁSÁRLÁS:<br />
                         A Solumium Pental kapható vagy megrendelhető az ország bármely gyógyszertárában.<br />
                         Kiemelt partnereink:<br />
-                        <a href="https://sanitaria.hu/solumium_pental_30ml" target="_blank" rel="noopener noreferrer">Sanitaria Kft</a>, 1024 Budapest, Rómer Flóris u. 34. &nbsp;tel: (+36-1) 3360884<br />
-                        <a href="https://www.lagymanyospatika.hu/termekeink/results,1-24?keyword=solumium" target="_blank" rel="noopener noreferrer">Lágymányos Patika</a>, 1111 Budapest, Budafoki út 47. &nbsp;tel: (+36-1) 4666246<br />
-                        <a href="http://www.medmarket.hu/szfgyt/" target="_blank" rel="noopener noreferrer">Szent Ferenc Gyógyszertár</a>, 1024 Budapest, Retek u. 3. &nbsp;tel: (+36-1) 2124196<br />
-                        <a href="http://www.medmarket.hu/szbgyt/" target="_blank" rel="noopener noreferrer">Szent Bernát Gyógyszertár</a>, 1126 Budapest, Böszörményi út 3a &nbsp;tel: (+36-1) 3555931
+                        <a href="https://sanitaria.hu/solumium_pental_30ml" target="_blank" rel="noopener noreferrer">Sanitaria Kft</a>, 1024 Budapest, Rómer Flóris u. 34. tel: (+36-1) 3360884<br />
+                        <a href="https://www.lagymanyospatika.hu/termekeink/results,1-24?keyword=solumium" target="_blank" rel="noopener noreferrer">Lágymányos Patika</a>, 1111 Budapest, Budafoki út 47. tel: (+36-1) 4666246<br />
+                        <a href="http://www.medmarket.hu/szfgyt/" target="_blank" rel="noopener noreferrer">Szent Ferenc Gyógyszertár</a>, 1024 Budapest, Retek u. 3. tel: (+36-1) 2124196<br />
+                        <a href="http://www.medmarket.hu/szbgyt/" target="_blank" rel="noopener noreferrer">Szent Bernát Gyógyszertár</a>, 1126 Budapest, Böszörményi út 3a tel: (+36-1) 3555931
                     </p>
                 </div>
             </section>
