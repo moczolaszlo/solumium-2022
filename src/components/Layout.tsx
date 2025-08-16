@@ -14,6 +14,7 @@ import badge7csillagosDocEn from '../docs/solumium_7csillagos_EN_20231129b_w1200
 import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
 import badgeDw2024Doc from '../docs/Dental_World_2024_cikk.pdf';
+import { useEffect } from 'react';
 
 type Language = 'hu' | 'en';
 
@@ -73,6 +74,10 @@ const pathRoot = window.location.host === 'moczolaszlo.github.io' ? '/solumium-2
 
 const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, withBadges }: LayoutProps) => {
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
+
+    useEffect(() => {
+        document.documentElement.lang = requestedLanguage;
+    }, [requestedLanguage]); 
 
     return (
         <>
