@@ -76,7 +76,7 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
     const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
 
     useEffect(() => {
-        if (requestedLanguage === 'en') {
+        if (document.documentElement.lang !== requestedLanguage) {
             document.documentElement.lang = requestedLanguage;
         }
     }, [requestedLanguage]);
