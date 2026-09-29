@@ -6,29 +6,37 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
-    - name: Use Node.js 22.x
-      uses: actions/setup-node@v4
+    - name: Use Node.js 24.x
+      uses: actions/setup-node@v7
       with:
-        node-version: 22.x
+        node-version: 24.x
+        cache: npm
 
     - name: Build
       run: |
-        npm install
+        npm ci
         npm run build
 
     - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: ./dist
 
   deploy:
+    # Only deploy from main, not from PR builds
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
     # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
     permissions:
       contents: read
@@ -45,8 +53,8 @@ jobs:
 
     steps:
       - name: Configure Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

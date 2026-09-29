@@ -73,7 +73,7 @@ const onChangeLanguage = (language: Language) => {
 const pathRoot = window.location.host === 'moczolaszlo.github.io' ? '/solumium-2022/' : '/';
 
 const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, withBadges }: LayoutProps) => {
-    const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : null;
+    const mainClassName = activePage === 'termekeink' || activePage === 'products' ? 'products' : undefined;
 
     useEffect(() => {
         if (document.documentElement.lang !== requestedLanguage) {
@@ -85,21 +85,21 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
         <>
             <div id="wrapper" className={requestedLanguage}>
                 <header>
-                    <a href={pathRoot} aria-current={activePage === 'index' ? 'page' : null}>
+                    <a href={pathRoot} aria-current={activePage === 'index' ? 'page' : undefined}>
                         <img src={solumiumLogo} width="181" height="48" alt="Solumium" />
                     </a>
                     <nav className="menu">
                         <ul>
                             {PAGES[requestedLanguage].map(({ id, name }, index) => (
                                 <li className={`menu_${index}`} key={index}>
-                                    <a href={`${pathRoot}${id}`} aria-current={activePage === id ? 'page' : null}>{name}</a>
+                                    <a href={`${pathRoot}${id}`} aria-current={activePage === id ? 'page' : undefined}>{name}</a>
                                 </li>
                             ))}
                         </ul>
                     </nav>
                     <nav className="languageSelector">
                         <ul>
-                            {Object.keys(PAGES).map((lang: Language) => {
+                            {(Object.keys(PAGES) as Language[]).map((lang) => {
                                 let href = '';
                                 const index = PAGES[requestedLanguage].findIndex(({ id }) => id === activePage);
                                 if (index > -1) {
