@@ -9,8 +9,8 @@ import badgeForbes from '../images/badge_forbes.png';
 import badgeGranprize from '../images/badge_granprize.png';
 import badgeDw2024 from '../images/badge_dw2024.png';
 
-import badge7csillagosDocHu from '../docs/solumium_7csillagos_20231119_w1200.jpg';
-import badge7csillagosDocEn from '../docs/solumium_7csillagos_EN_20231129b_w1200.jpg';
+import badge7csillagosDocHu from '../docs/solumium_7csillagos_webplakat_w1200_20260928.jpg';
+import badge7csillagosDocEn from '../docs/solumium_7star_webposter_w1200_20260928.jpg';
 import badgeForbesDoc from '../docs/ForbesNext_2017Tel_Solumium.pdf';
 import badgeGranprizeDoc from '../docs/Swedish_GranPrize_2015_Dr_Noszticzius_Zoltan.pdf';
 import badgeDw2024Doc from '../docs/Dental_World_2024_cikk.pdf';
