@@ -2,9 +2,28 @@ import { createRoot } from 'react-dom/client';
 import Citation from '../components/Citation';
 import Layout from '../components/Layout';
 
+import eloadasVazlat from '../docs/Solumium_szajviz_-_uj_prevencios_strategia_20261009_eloadasvazlat.pdf';
+import eloadasAbrak from '../docs/Solumium_szajviz_-_uj_prevencios_strategia_20261009_abrasor.pdf';
+
 const Page = () => {
     return (
         <Layout activePage="tudomanyos-hatter" anotherLanguagePage="scientific-background" requestedLanguage="hu">
+            <h2>SOLUMIUM SZÁJVIZEK: ÚJ PREVENCIÓS STRATÉGIA</h2>
+            <iframe
+                className="video"
+                src="https://www.youtube-nocookie.com/embed/KL_IqRuk4es"
+                title="Solumium szájvizek: új prevenciós stratégia"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+            />
+            <p>
+                Dr. Noszticzius Zoltán a Dental World 2026 kongresszuson tartott előadást arról, hogy a Solumium szájvíz rendszeres használatával hogyan óvhatjuk meg fogaink és ínyünk épségét rendkívül hatékonyan és kíméletesen.
+            </p>
+            <p>
+                Az előadás vázlatának szövegét <a href={eloadasVazlat} target="_blank">innen</a>, ábrasorát <a href={eloadasAbrak} target="_blank">innen</a> tudja letölteni.
+            </p>
             <h2>A TERMÉKEINKET MEGALAPOZÓ TALÁLMÁNY</h2>
             <p>
                 A Solumium termékek magyar találmányon alapulnak.

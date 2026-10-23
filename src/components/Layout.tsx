@@ -142,7 +142,7 @@ const Layout = ({ activePage, anotherLanguagePage, children, requestedLanguage, 
                     </div>
                 </footer>
             </div>
-            <Popup language={requestedLanguage} />
+            <Popup language={requestedLanguage} pathRoot={pathRoot} />
         </>
     )
 };
