@@ -473,3 +473,11 @@ footer div {
     margin-bottom: 30px;
     border: 0;
 }
+
+.partner {
+    display: block;
+}
+
+.partner a {
+    margin-left: 0.75em;
+}
