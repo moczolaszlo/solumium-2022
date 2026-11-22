@@ -31,7 +31,7 @@ const Page = () => {
                     </p>
                     <p>
                         BUY:<br />
-                        Solumium Coral is available or can be ordered at any pharmacy in the country.<br />
+                        Solumium Coral is available or can be ordered at any pharmacy in Hungary.<br />
                         Our key partners:<br />
                         <Partners lang="en" />
                     </p>
@@ -58,7 +58,7 @@ const Page = () => {
                     </p>
                     <p>
                         BUY:<br />
-                        Solumium Pental is available or can be ordered at any pharmacy in the country.<br />
+                        Solumium Pental is available or can be ordered at any pharmacy in Hungary.<br />
                         Our key partners:<br />
                         <Partners lang="en" />
                     </p>
